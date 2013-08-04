@@ -13,6 +13,7 @@
     "buffers": "~0.1.1"
   },
   "devDependencies": {
+    "concat-stream": "~1.0.0",
     "tape": "~1.0.0"
   },
   "repository": {
