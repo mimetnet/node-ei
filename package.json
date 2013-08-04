@@ -9,6 +9,9 @@
   "scripts": {
     "test": "./node_modules/.bin/tape ./test/*.js"
   },
+  "dependencies": {
+    "buffers": "~0.1.1"
+  },
   "devDependencies": {
     "tape": "~1.0.0"
   },
