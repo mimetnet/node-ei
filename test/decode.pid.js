@@ -3,7 +3,7 @@ var fs = require('fs')
     , decoder = require('../lib/decoder')
     , EiPid = require('../lib/pid')
     , ei = require('../lib/const')
-    , tap = require('tape')
+    , tap = require('tap')
     , test = tap.test
 ;
 

@@ -2,7 +2,7 @@ var fs = require('fs')
     , path = require('path')
     , decoder = require('../lib/decoder')
     , ei = require('../lib/const')
-    , tap = require('tape')
+    , tap = require('tap')
     , test = tap.test
     ;
 
