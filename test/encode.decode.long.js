@@ -62,6 +62,19 @@ test('encode/decode/ulong', function(t) {
     }));
 });
 
+
+test('encode/decode/ulong-throws', function(t) {
+    'use strict';
+
+    var enc = encoder();
+    enc.encodeVersion();
+
+    t.throws(function() {
+        enc.encodeULong(-1);
+    }, new TypeError('Cannot encode less than 0'));
+    t.end();
+});
+
 test('encode/decode/long-small', function(t) {
     'use strict';
 
