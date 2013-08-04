@@ -1,11 +1,12 @@
 var fs = require('fs')
+    , path = require('path')
     , decoder = require('../lib/decoder')
     , ei = require('../lib/const')
     , tap = require('tape')
     , test = tap.test
 ;
 
-fs.readFile('fixtures/bool_bad.ebin', function(error, data) {
+fs.readFile(path.join(__dirname, 'fixtures', 'bool_bad.ebin'), function(error, data) {
     var dec = decoder(data);
 
     test('decode/bool_bad', function(t) {
