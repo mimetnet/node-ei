@@ -1,0 +1,28 @@
+{
+  "name": "ei",
+  "version": "0.0.0",
+  "description": "Erlang Interface for Node.js",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/tap ./test/*.js"
+  },
+  "devDependencies": {
+    "tap": "~0.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mimetnet/node-ei"
+  },
+  "keywords": [
+    "erlang",
+    "ei"
+  ],
+  "author": "Matthew I. Metnetsky <matthew@cowarthill.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mimetnet/node-ei/issues"
+  }
+}
