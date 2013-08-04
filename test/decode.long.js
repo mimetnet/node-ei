@@ -6,13 +6,25 @@ var fs = require('fs')
     , test = tap.test
     ;
 
-fs.readFile(path.join(__dirname, 'fixtures', 'integer.ebin'), function(error, data) {
-    var dec = decoder(data);
+test('decode/long', function(t) {
+    fs.readFile(path.join(__dirname, 'fixtures', 'integer.ebin'), function(error, data) {
+        var dec = decoder(data);
 
-    test('decode/long', function(t) {
         t.ok(dec.decodeVersion(), 'version');
         t.equals(dec.getType(), ei.INTEGER_EXT, 'type');
-        t.deepEqual(dec.decodeLong(), 100000000, 'value');
+        t.equals(dec.decodeLong(), -345, 'value');
+        t.equals(dec.index, data.length, 'eof');
+        t.end();
+    });
+});
+
+test('decode/ulong', function(t) {
+    fs.readFile(path.join(__dirname, 'fixtures', 'u-integer.ebin'), function(error, data) {
+        var dec = decoder(data);
+
+        t.ok(dec.decodeVersion(), 'version');
+        t.equals(dec.getType(), ei.INTEGER_EXT, 'type');
+        t.equals(dec.decodeULong(), 345, 'value');
         t.equals(dec.index, data.length, 'eof');
         t.end();
     });
