@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/.bin/tap ./test/*.js"
+    "test": "./node_modules/.bin/tape ./test/*.js"
   },
   "devDependencies": {
     "tape": "~1.0.0"
