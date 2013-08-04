@@ -12,7 +12,7 @@ fs.readFile(path.join(__dirname, 'fixtures', 'string.ebin'), function(error, dat
     test('decode/string', function(t) {
         t.ok(dec.decodeVersion(), 'version');
         t.equals(dec.getType(), ei.STRING_EXT, 'type');
-        t.deepEqual(dec.decodeString(), 'string2', 'value');
+        t.deepEqual(dec.decodeString(), 'string', 'value');
         t.equals(dec.index, data.length, 'eof');
         t.end();
     });
