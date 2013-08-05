@@ -17,7 +17,7 @@ test('encode/decode/tuple-empty', function(t) {
         var dec = decoder(data);
 
         t.ok(dec.decodeVersion(), 'version');
-        t.equals(dec.getType(), ei.NIL_EXT, 'type');
+        t.equals(dec.getType(), ei.SMALL_TUPLE_EXT, 'type');
         t.equals(dec.decodeTupleHeader(), 0, 'value');
         t.equals(dec.index, data.length, 'eof');
         t.end();
@@ -39,7 +39,7 @@ test('encode/decode/tuple-3', function(t) {
         var dec = decoder(data);
 
         t.ok(dec.decodeVersion(), 'version');
-        t.equals(dec.getType(), ei.LIST_EXT, 'type');
+        t.equals(dec.getType(), ei.SMALL_TUPLE_EXT, 'type');
         t.equals(dec.decodeTupleHeader(), 4, 'length');
         t.equals(dec.decodeLong(), 5, 'long');
         t.equals(dec.decodeString(), 'string', 'string');
