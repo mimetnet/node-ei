@@ -1,4 +1,3 @@
-process.env.EI_ENCODER_SIZE = 15;
 var fs = require('fs')
     , concat = require('concat-stream')
     , encoder = require('../lib/encoder')
