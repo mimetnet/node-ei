@@ -18,5 +18,5 @@ Erlang Interface for Node.js. A JavaScript implementation of [Erlang's External 
 
 [1]: http://www.erlang.org/doc/apps/erts/erl_ext_dist.html
 [2]: http://www.erlang.org/doc/man/ei.html
-[3]: https://api.travis-ci.org/mimetnet/node-ei.png
+[3]: https://api.travis-ci.org/mimetnet/node-ei.png?branch=master
 [4]: https://travis-ci.org/mimetnet/node-ei
