@@ -49,3 +49,38 @@ test('encode/decode/tuple-3', function(t) {
         t.end();
     }));
 });
+
+test('encode/decode/tuple-large', function(t) {
+    'use strict';
+
+    var i, enc, list = [];
+
+    for (i=0; i<300; i++) {
+        list.push(i);
+    }
+
+    enc = encoder();
+    enc.encodeVersion();
+    enc.encodeTupleHeader(list.length);
+
+    list.forEach(function(val) {
+        enc.encodeLong(val);
+    });
+
+    enc.pipe(concat(function(data) {
+        var dec = decoder(data);
+
+        t.ok(dec.decodeVersion(), 'version');
+        t.equals(dec.getType(), ei.LARGE_TUPLE_EXT, 'type');
+        //t.equals(dec.decodeTupleHeader(), list.length, 'length');
+
+        while (dec.skipTerm()) {}
+
+        //list.forEach(function(val) {
+        //    t.equals(dec.decodeLong(), val, ('value-' + val));
+        //});
+
+        //t.equals(dec.index, data.length, 'eof');
+        t.end();
+    }));
+});
