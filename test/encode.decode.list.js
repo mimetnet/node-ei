@@ -29,7 +29,7 @@ test('encode/decode/list-3', function(t) {
 
     var enc = encoder();
     enc.encodeVersion();
-    enc.encodeListHeader(1);
+    enc.encodeListHeader(4);
     enc.encodeLong(5);
     enc.encodeString('string');
     enc.encodeDouble(5.4321);
@@ -40,7 +40,7 @@ test('encode/decode/list-3', function(t) {
 
         t.ok(dec.decodeVersion(), 'version');
         t.equals(dec.getType(), ei.LIST_EXT, 'type');
-        t.equals(dec.decodeListHeader(), 1, 'length');
+        t.equals(dec.decodeListHeader(), 4, 'length');
         t.equals(dec.decodeLong(), 5, 'long');
         t.equals(dec.decodeString(), 'string', 'string');
         t.equals(dec.decodeDouble(), 5.4321, 'double');
