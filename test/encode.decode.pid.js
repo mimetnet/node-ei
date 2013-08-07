@@ -12,7 +12,7 @@ test('encode/decode/pid', function(t) {
 
     var enc, pid;
 
-    pid = new EiPid('nonost@nohost', 1, 2, 3);
+    pid = new EiPid('nonode@nohost', 1, 2, 3);
 
     enc = encoder();
     enc.encodeVersion();
