@@ -1,5 +1,6 @@
-var fs = require('fs')
-    , concat = require('concat-stream')
+'use strict';
+
+var concat = require('concat-stream')
     , encoder = require('../lib/encoder')
     , decoder = require('../lib/decoder')
     , EiPid = require('../lib/pid')
@@ -8,8 +9,6 @@ var fs = require('fs')
 ;
 
 test('encode/decode/pid', function(t) {
-    'use strict';
-
     var enc, pid;
 
     pid = new EiPid('nonode@nohost', 1, 2, 3);
