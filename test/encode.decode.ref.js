@@ -1,5 +1,6 @@
-var fs = require('fs')
-    , concat = require('concat-stream')
+'use strict';
+
+var concat = require('concat-stream')
     , encoder = require('../lib/encoder')
     , decoder = require('../lib/decoder')
     , EiRef = require('../lib/ref')
@@ -8,8 +9,6 @@ var fs = require('fs')
 ;
 
 test('encode/decode/ref', function(t) {
-    'use strict';
-
     var enc, ref;
 
     ref = new EiRef('nonode@nohost', 3, [94, 0, 0], 0);
