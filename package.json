@@ -7,7 +7,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "./node_modules/.bin/tap ./test/*.js"
+    "test": "tap ./test/*.js"
   },
   "dependencies": {
     "buffers": "~0.1.1",
