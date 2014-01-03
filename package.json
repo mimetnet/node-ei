@@ -14,7 +14,7 @@
     "readable-stream": "~1.1.0"
   },
   "devDependencies": {
-    "concat-stream": "~1.3.0",
+    "concat-stream": "~1.4.0",
     "tap": "~0.4.0"
   },
   "repository": {
@@ -24,6 +24,9 @@
   "keywords": [
     "erlang",
     "ei"
+  ],
+  "engines": [
+    "node >= 0.10.0"
   ],
   "author": "Matthew I. Metnetsky <matthew@cowarthill.com>",
   "license": "MIT",
