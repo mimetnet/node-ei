@@ -41,8 +41,6 @@ test('encode/decode/bin-empty', function(t) {
     enc.encodeBinary(buf);
 
     enc.pipe(concat(function(data) {
-        console.warn('buff', data, Buffer.isBuffer(data));
-
         var dec = decoder(data);
 
         t.ok(dec.decodeVersion(), 'version');
